@@ -30,7 +30,7 @@ def batch_generator(jl: list, data_path: str, batch_size: int, random_seed: int=
         for image_filename in element["filenames"]:
             image_path = os.path.join(data_path, image_filename)
             image_paths.append(image_path)
-            labels.append(element["category_id"])
+            labels.append(element.get("category_id"))
             ids.append(element["_id"])    
         
     assert len(image_paths) == len(labels) == len(ids)
@@ -38,7 +38,7 @@ def batch_generator(jl: list, data_path: str, batch_size: int, random_seed: int=
     left_index = 0
     right_index = batch_size
     
-    while right_index < len(image_paths): # Batches generator loop
+    while right_index < len(image_paths)+batch_size: # Batches generator loop
         # Get batches
         ids_batch = ids[left_index:right_index]
         images_batch = list(map(lambda image_path: imread(image_path), image_paths[left_index:right_index]))
