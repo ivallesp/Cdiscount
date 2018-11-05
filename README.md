@@ -1,5 +1,5 @@
 # CDiscount solution for extreme image classification
-This is the *quick and dirty* (apologies for that) solution I implemented as a *proof of concept* for testing the convolutional neural networks performance when classifying millions of images in +5000 distinct categories. The main goal of this effort was to understand if it was possible to train this algorithm from scratch and arrive to a good solution. The algorithm trained in a NVidia Titan XPascal during one month.
+This is the *quick and dirty* (apologies for that) solution I implemented as a *proof of concept* for testing the convolutional neural networks performance when classifying millions of images in +5000 distinct categories. The main goal of this effort was to **understand if it was possible to train this algorithm from scratch** and arrive to a good solution. The algorithm trained in a NVidia Titan XPascal during one month.
 
 ## Getting started
 For reproducing the experiment, please, follow the subsequent steps
@@ -25,4 +25,4 @@ Feel free to send a pull request and it will be reviewed. Potential further work
 - Research for a better way of combining predictions of the different images of the same product (now we are using the average of the scores)
 
 ## License
-...
+This project has been licensed under MIT agreement. Please, read the `LICENSE` file for further details. Copyright (c) 2017 Iván Vallés Pérez
